@@ -73,7 +73,7 @@ The outputs are stored in `final_outputs/coloring_book.pdf` only if the biograph
 
 ## Hardware
 
-The target computer should have 6 GB graphics card and 16 GB RAM
+The target computer should have 6 GB graphics card and 16 GB RAM.
 
 ## Authors
 
