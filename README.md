@@ -74,7 +74,8 @@ The outputs are stored in `final_outputs/coloring_book.pdf` only if the biograph
 ## Hardware
 
 The target computer should have 6 GB graphics card and 16 GB RAM.
-
+## Video / Demo Link:
+LINK: https://drive.google.com/file/d/1ZqdTpGDpLMWbCXLP8kzvKlfNPTCo-n99/view?usp=sharing
 ## Authors
 
 Wilson Joel Aranha, Housam Mouloue, Melroy D'costa.
