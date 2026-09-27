@@ -4,7 +4,7 @@ The project aims to create a local system capable of creating a coloring book fo
 
 ## About
 
-The notebook draws wikipedia lead and potrait of famous people, creates a short biographie from the lead, compares the biographie against the lead, generates a coloable image and prints them on a page. The notebook uses Llama 3.1 8B to generate biographies, RoBERTa-Large MNLI as fact checker. Furthermore, it uses [Awacke1](https://huggingface.co/spaces/awacke1/Image-to-Line-Drawings) to generate line drawing, then redraws the drawing using Stable diffusion 1.5, ControlNet and IP-Adapter. 
+The notebook draws Wikipedia lead and portrait of famous people, creates a short biography from the lead, compares the biographies against the lead, generates a colourable image and prints them on a page. The notebook uses Llama 3.1 8B to generate biographies, RoBERTa-Large MNLI as fact checker. Furthermore, it uses [Awacke1](https://huggingface.co/spaces/awacke1/Image-to-Line-Drawings) to generate line drawing, then redraws the drawing using Stable diffusion 1.5, ControlNet and IP-Adapter. 
 
 ## Technologies
 
@@ -14,7 +14,7 @@ Jupyter Notebook
 
 Ollama
 
-Pytorch
+PyTorch
 
 Llama 3.1 8B
 
@@ -30,11 +30,11 @@ IP-Adapter
 
 ## How it works
 
-1. Accepts a name and crawls the wikipedia and extracts lead and potrait.
-2. Generates atmost 6 sentences for biographie using Llam3.1 8B.
-3. Checks the whether each sentence is supoorted by the lead.
-4. Creates a Line drawing using [Awacke1,](https://huggingface.co/spaces/awacke1/Image-to-Line-Drawings) and Stable Diffusion 1.5 turns it into colorable drawing, guided by contolnet to follow the structure of the Line drawing, and IP-Adapter to keep the facial features.
-5. Places the drawing and biographie on an A4 sheet.
+1. Accepts a name and crawls the Wikipedia and extracts lead and portrait.
+2. Generates at most 6 sentences for each biography using Llam3.1 8B.
+3. Checks whether each sentence is supported by the lead.
+4. Creates a Line drawing using [Awacke1,](https://huggingface.co/spaces/awacke1/Image-to-Line-Drawings) and Stable Diffusion 1.5 turns it into colourable drawing, guided by ControlNet to follow the structure of the Line drawing, and IP-Adapter to keep the facial features.
+5. Places the drawing and biography on an A4 sheet.
 
 The Image pipeline uses 512x640, UniPC, 40 steps, strength 0.57, guidance 9 and seed 42 plus the person's position in the list (43 in our notebook, since it is only tested on one person).
 
@@ -45,7 +45,7 @@ To run the project on your own computer:
 1. Clone the repository
   ```powershell
    git clone https://github.com/wilson257/AI_Colouring_Book_Main.git
-   cd AI_Colouring_Book_Main/Local_Final_Run
+   cd AI_Colouring_Book_Main\Local_Final_Run
   ```
 2. Install the necessary libraries and [Ollama for Windows](https://ollama.com/download/windows)
   ```powershell
@@ -57,7 +57,7 @@ To run the project on your own computer:
   ```
 3. Download Stable diffusion 1.5 into Local_Final_Run/stable-diffusion-v1-5-diffusers. 
   ```powershell
-   .\.venv\Scripts\python.exe -c "from huggingface_hub import snapshot_download; snapshot_download('stable-diffusion-v1-5/stable-diffusion-v1-5', local_dir='stable-diffusion-v1-5-diffusers', allow_patterns=['*.json','tokenizer/*','feature_extractor/*','scheduler/*','unet/*fp16.safetensors','vae/*fp16.safetensors','text_encoder/*fp16.safetensors'])"
+   ..\.venv\Scripts\python.exe -c "from huggingface_hub import snapshot_download; snapshot_download('stable-diffusion-v1-5/stable-diffusion-v1-5',   local_dir='stable-diffusion-v1-5-diffusers', allow_patterns=['*.json','tokenizer/*','feature_extractor/*','scheduler/*','unet/*fp16.safetensors','vae/*fp16.safetensors','text_encoder/*fp16.safetensors'])"
   ```
 4. From Local_Final_Run folder, run  the following command
   ```powershell
@@ -74,6 +74,7 @@ The outputs are stored in `final_outputs/coloring_book.pdf` only if the biograph
 ## Hardware
 
 The target computer should have 6 GB graphics card and 16 GB RAM.
+
 ## Video / Demo Link:
 LINK: https://drive.google.com/file/d/1ZqdTpGDpLMWbCXLP8kzvKlfNPTCo-n99/view?usp=sharing
 ## Authors
